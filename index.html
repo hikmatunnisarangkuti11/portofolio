@@ -17,17 +17,23 @@
       rel="stylesheet"
       type="text/css"
     />
-    <video
-      autoplay
-      loop
-      muted
-      poster="assets/images/Pink Red Simple Feminime Group Project Presentation.mp4"
-    >
-      <source
-        src="assets/images/Pink Red Simple Feminime Group Project Presentation.mp4"
-        type="video/mp4"
-      />
-    </video>
+    
+    <div class="video-container">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="assets/images/Pink Red Simple Feminime Group Project Presentation.mp4"
+      >
+        <source
+          src="assets/images/Pink Red Simple Feminime Group Project Presentation.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
 
     <style>
       html,
@@ -501,6 +507,25 @@
         display: none !important;
         transition: none !important;
       }
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
 
       hr {
         align-items: center;
